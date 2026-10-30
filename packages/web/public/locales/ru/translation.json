@@ -556,7 +556,7 @@
   "Id": "Id",
   "Display Name": "Показать имя",
   "Enable API Keys": "Включить ключи API",
-  "Create and manage API keys to access Activepieces APIs.": "Создание и управление ключами API для доступа к Activepieces API.",
+  "Create and manage API keys to access Activepieces APIs.": "Создание и управление ключами API для доступа к Tandevia Workflow API.",
   "Mange API keys": "Mange API keys",
   "New Api Key": "Новый ключ Api",
   "No API keys found": "Ключи API не найдены",

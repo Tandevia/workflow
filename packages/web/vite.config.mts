@@ -12,8 +12,8 @@ export default defineConfig(({ command, mode }) => {
   const isDev = command === 'serve' || mode === 'development';
   const emitSourcemap = process.env.AP_BUILD_SOURCEMAP === 'true';
 
-  const AP_TITLE = 'Activepieces';
-  const AP_FAVICON = 'https://activepieces.com/favicon.ico';
+  const AP_TITLE = 'Tandevia Workflow';
+  const AP_FAVICON = '/favicon.ico';
 
   return {
     root: __dirname,

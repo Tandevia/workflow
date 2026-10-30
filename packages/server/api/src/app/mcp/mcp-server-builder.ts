@@ -16,6 +16,11 @@ import { McpCallBilling, mcpUsageTracker } from './mcp-usage-tracker'
 import { activepiecesTools, ALL_CONTROLLABLE_TOOL_NAMES, LOCKED_TOOL_NAMES, PLATFORM_LEVEL_TOOL_NAMES } from './tools'
 import { apSetProjectContextTool } from './tools/ap-set-project-context'
 
+// Tandevia Workflow: the MCP server's icons come from this instance, not from a CDN.
+function tandeviaPublicUrl(): string {
+    return (system.get(AppSystemProp.FRONTEND_URL) ?? '').replace(/\/+$/, '')
+}
+
 const PLATFORM_LEVEL_TOOL_SET = new Set<string>(PLATFORM_LEVEL_TOOL_NAMES)
 
 const MCP_SERVER_INSTRUCTIONS = `## Activepieces MCP Server
@@ -49,17 +54,17 @@ export async function buildMcpServer({ mcp, userId, platformId, clientKey, clien
 
     const server = new McpServer({
         name: 'Activepieces',
-        title: 'Activepieces',
+        title: 'Tandevia Workflow',
         version: '1.0.0',
-        websiteUrl: 'https://activepieces.com',
-        description: 'Automation and workflow MCP server by Activepieces',
+        websiteUrl: 'https://tandevia.com',
+        description: 'Automation and workflow MCP server by Tandevia Workflow',
         icons: [
             {
-                src: 'https://cdn.activepieces.com/brand/logo.svg',
+                src: `${tandeviaPublicUrl()}/logo.svg`,
                 mimeType: 'image/svg+xml',
             },
             {
-                src: 'https://cdn.activepieces.com/brand/logo-192.png',
+                src: `${tandeviaPublicUrl()}/logo-192.png`,
                 mimeType: 'image/png',
                 sizes: ['192x192'],
             },

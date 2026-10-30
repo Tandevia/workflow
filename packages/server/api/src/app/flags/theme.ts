@@ -72,10 +72,12 @@ export function generateTheme({
     }
 }
 
+// Tandevia Workflow: the community edition always shows this theme. The assets are
+// served by the web app itself (packages/web/public, see tandevia/generate-brand.py).
 export const defaultTheme = generateTheme({
-    primaryColor: '#6e41e2',
-    websiteName: 'Activepieces',
-    fullLogoUrl: 'https://cdn.activepieces.com/brand/full-logo.png',
-    favIconUrl: 'https://cdn.activepieces.com/brand/logo.svg',
-    logoIconUrl: 'https://cdn.activepieces.com/brand/logo.svg',
+    primaryColor: '#3A28E0',
+    websiteName: 'Tandevia Workflow',
+    fullLogoUrl: '/tandevia/full-logo.png',
+    favIconUrl: '/logo.svg',
+    logoIconUrl: '/logo.svg',
 })
